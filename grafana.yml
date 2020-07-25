@@ -1,3 +1,4 @@
+#create service for grafana
 apiVersion: v1
 kind: Service
 metadata:
@@ -11,6 +12,7 @@ spec:
     env: grafana
   type: LoadBalancer
 ---
+#create PVC for Grafana
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -24,6 +26,7 @@ spec:
     requests:
       storage: 2Gi
 ---
+#create deployment for Grafana
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
