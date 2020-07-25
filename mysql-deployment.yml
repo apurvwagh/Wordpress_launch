@@ -1,3 +1,4 @@
+#create service for MYSQL 
 apiVersion: v1
 kind: Service
 metadata:
@@ -12,6 +13,7 @@ spec:
     tier: mysql
   clusterIP: None
 ---
+#create PVC  for MYSQL
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -25,6 +27,7 @@ spec:
     requests:
       storage: 20Gi
 ---
+#create deployment for MYSQL with PVC
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
