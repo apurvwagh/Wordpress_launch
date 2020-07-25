@@ -1,4 +1,4 @@
-
+#create service for prometheus
 apiVersion: v1
 kind: Service
 metadata:
@@ -12,6 +12,7 @@ spec:
     env: prometheus
   type: LoadBalancer
 ---
+#create PVC for prometheus
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -25,6 +26,8 @@ spec:
     requests:
       storage: 2Gi
 ---
+
+#create prometheus-deployment
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
