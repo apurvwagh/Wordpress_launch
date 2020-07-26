@@ -33,7 +33,7 @@ kind: Deployment
 metadata:
   name: wordpress-mysql
   labels:
-    app: wordpress
+    app: wordpress1
 spec:
   selector:
     matchLabels:
